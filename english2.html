@@ -1,0 +1,396 @@
+<html>
+
+<head>
+
+<style>
+
+button {
+  background: none;
+font-size:25pt;
+}
+
+
+span,  TD {
+ font-size:25pt;
+}
+
+</style>
+</head>
+<body>
+<P align=left><A href=index.html><strong>HOME</strong></A>
+<center>
+<P><select type=text id=char style="display:none">
+<option name=c1 value="after">after</option>
+<option name=c2 value="again">again</option>
+<option name=c3 value="air">air</option>
+<option name=c4 value="also">also</option>
+<option name=c5 value="America">America</option>
+<option name=c6 value="animal">animal</option>
+<option name=c7 value="another">another</option>
+<option name=c8 value="answer">answer</option>
+<option name=c9 value="any">any</option>
+<option name=c10 value="around">around</option>
+<option name=c11 value="ask">ask</option>
+<option name=c12 value="away">away</option>
+<option name=c13 value="back">back</option>
+<option name=c14 value="because">because</option>
+<option name=c15 value="before">before</option>
+<option name=c16 value="big">big</option>
+<option name=c17 value="boy">boy</option>
+<option name=c18 value="came">came</option>
+<option name=c19 value="change">change</option>
+<option name=c20 value="different">different</option>
+<option name=c21 value="does">does</option>
+<option name=c22 value="end">end</option>
+<option name=c23 value="even">even</option>
+<option name=c24 value="follow">follow</option>
+<option name=c25 value="form">form</option>
+<option name=c26 value="found">found</option>
+<option name=c27 value="give">give</option>
+<option name=c28 value="good">good</option>
+<option name=c29 value="great">great</option>
+<option name=c30 value="hand">hand</option>
+<option name=c31 value="help">help</option>
+<option name=c32 value="here">here</option>
+<option name=c33 value="home">home</option>
+<option name=c34 value="house">house</option>
+<option name=c35 value="just">just</option>
+<option name=c36 value="kind">kind</option>
+<option name=c37 value="know">know</option>
+<option name=c38 value="land">land</option>
+<option name=c39 value="large">large</option>
+<option name=c40 value="learn">learn</option>
+<option name=c41 value="letter">letter</option>
+<option name=c42 value="line">line</option>
+<option name=c43 value="little">little</option>
+<option name=c44 value="live">live</option>
+<option name=c45 value="man">man</option>
+<option name=c46 value="me">me</option>
+<option name=c47 value="means">means</option>
+<option name=c48 value="men">men</option>
+<option name=c49 value="most">most</option>
+<option name=c50 value="mother">mother</option>
+<option name=c51 value="move">move</option>
+<option name=c52 value="much">much</option>
+<option name=c53 value="must">must</option>
+<option name=c54 value="name">name</option>
+<option name=c55 value="need">need</option>
+<option name=c56 value="new">new</option>
+<option name=c57 value="off">off</option>
+<option name=c58 value="old">old</option>
+<option name=c59 value="only">only</option>
+<option name=c60 value="our">our</option>
+<option name=c61 value="over">over</option>
+<option name=c62 value="page">page</option>
+<option name=c63 value="picture">picture</option>
+<option name=c64 value="place">place</option>
+<option name=c65 value="play">play</option>
+<option name=c66 value="point">point</option>
+<option name=c67 value="put">put</option>
+<option name=c68 value="read">read</option>
+<option name=c69 value="right">right</option>
+<option name=c70 value="same">same</option>
+<option name=c71 value="say">say</option>
+<option name=c72 value="sentence">sentence</option>
+<option name=c73 value="set">set</option>
+<option name=c74 value="should">should</option>
+<option name=c75 value="show">show</option>
+<option name=c76 value="small">small</option>
+<option name=c77 value="sound">sound</option>
+<option name=c78 value="spell">spell</option>
+<option name=c79 value="still">still</option>
+<option name=c80 value="study">study</option>
+<option name=c81 value="such">such</option>
+<option name=c82 value="take">take</option>
+<option name=c83 value="tell">tell</option>
+<option name=c84 value="things">things</option>
+<option name=c85 value="think">think</option>
+<option name=c86 value="three">three</option>
+<option name=c87 value="through">through</option>
+<option name=c88 value="too">too</option>
+<option name=c89 value="try">try</option>
+<option name=c90 value="turn">turn</option>
+<option name=c91 value="us">us</option>
+<option name=c92 value="very">very</option>
+<option name=c93 value="want">want</option>
+<option name=c94 value="well">well</option>
+<option name=c95 value="went">went</option>
+<option name=c96 value="where">where</option>
+<option name=c97 value="why">why</option>
+<option name=c98 value="work">work</option>
+<option name=c99 value="world">world</option>
+<option name=c100 value="add">add</option>
+<option name=c101 value="almost">almost</option>
+<option name=c102 value="along">along</option>
+<option name=c103 value="always">always</option>
+<option name=c104 value="began">began</option>
+<option name=c105 value="begin">begin</option>
+<option name=c106 value="being">being</option>
+<option name=c107 value="below">below</option>
+<option name=c108 value="between">between</option>
+<option name=c109 value="book">book</option>
+<option name=c110 value="both">both</option>
+<option name=c111 value="car">car</option>
+<option name=c112 value="carry">carry</option>
+<option name=c113 value="children">children</option>
+<option name=c114 value="city">city</option>
+<option name=c115 value="close">close</option>
+<option name=c116 value="country">country</option>
+<option name=c117 value="cut">cut</option>
+<option name=c118 value="don’t">don’t</option>
+<option name=c119 value="earth">earth</option>
+<option name=c120 value="eat">eat</option>
+<option name=c121 value="enough">enough</option>
+<option name=c122 value="every">every</option>
+<option name=c123 value="example">example</option>
+<option name=c124 value="eyes">eyes</option>
+<option name=c125 value="face">face</option>
+<option name=c126 value="family">family</option>
+<option name=c127 value="far">far</option>
+<option name=c128 value="father">father</option>
+<option name=c129 value="feet">feet</option>
+<option name=c130 value="few">few</option>
+<option name=c131 value="food">food</option>
+<option name=c132 value="four">four</option>
+<option name=c133 value="girl">girl</option>
+<option name=c134 value="got">got</option>
+<option name=c135 value="group">group</option>
+<option name=c136 value="grow">grow</option>
+<option name=c137 value="hard">hard</option>
+<option name=c138 value="head">head</option>
+<option name=c139 value="hear">hear</option>
+<option name=c140 value="high">high</option>
+<option name=c141 value="idea">idea</option>
+<option name=c142 value="important">important</option>
+<option name=c143 value="Indian">Indian</option>
+<option name=c144 value="it’s">it’s</option>
+<option name=c145 value="keep">keep</option>
+<option name=c146 value="last">last</option>
+<option name=c147 value="late">late</option>
+<option name=c148 value="leave">leave</option>
+<option name=c149 value="left">left</option>
+<option name=c150 value="let">let</option>
+<option name=c151 value="life">life</option>
+<option name=c152 value="light">light</option>
+<option name=c153 value="list">list</option>
+<option name=c154 value="might">might</option>
+<option name=c155 value="mile">mile</option>
+<option name=c156 value="miss">miss</option>
+<option name=c157 value="mountains">mountains</option>
+<option name=c158 value="near">near</option>
+<option name=c159 value="never">never</option>
+<option name=c160 value="next">next</option>
+<option name=c161 value="night">night</option>
+<option name=c162 value="often">often</option>
+<option name=c163 value="once">once</option>
+<option name=c164 value="open">open</option>
+<option name=c165 value="own">own</option>
+<option name=c166 value="paper">paper</option>
+<option name=c167 value="plant">plant</option>
+<option name=c168 value="real">real</option>
+<option name=c169 value="river">river</option>
+<option name=c170 value="run">run</option>
+<option name=c171 value="saw">saw</option>
+<option name=c172 value="school">school</option>
+<option name=c173 value="sea">sea</option>
+<option name=c174 value="second">second</option>
+<option name=c175 value="seem">seem</option>
+<option name=c176 value="side">side</option>
+<option name=c177 value="something">something</option>
+<option name=c178 value="sometimes">sometimes</option>
+<option name=c179 value="song">song</option>
+<option name=c180 value="soon">soon</option>
+<option name=c181 value="start">start</option>
+<option name=c182 value="state">state</option>
+<option name=c183 value="stop">stop</option>
+<option name=c184 value="story">story</option>
+<option name=c185 value="talk">talk</option>
+<option name=c186 value="those">those</option>
+<option name=c187 value="thought">thought</option>
+<option name=c188 value="together">together</option>
+<option name=c189 value="took">took</option>
+<option name=c190 value="tree">tree</option>
+<option name=c191 value="under">under</option>
+<option name=c192 value="until">until</option>
+<option name=c193 value="walk">walk</option>
+<option name=c194 value="watch">watch</option>
+<option name=c195 value="while">while</option>
+<option name=c196 value="white">white</option>
+<option name=c197 value="without">without</option>
+<option name=c198 value="young">young</option>
+
+</select>
+
+
+
+
+<button id=text onclick="test()" >
+
+<svg height="120" width="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+      style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="60" rx="85" ry="50" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana"
+  x="50" y="75">Play</text>
+</svg>
+
+</button>
+<P>
+	<Table id=hide0 border=0 style="display:none">	
+	<TR>
+<TD>Number of Correct Attempts : <span id=count style="display:none"></span><span id=countNum></span>
+<TR>
+<TD>Number of Wrong Attempts : <span id=count2 style="display:none"></span><span id=countNum2></span>
+</Table>		
+		<P>
+		<span id=answer></span>
+		</P>
+		<P>
+		<span id=message></span>
+		</P>
+		
+		
+	
+	<button id=text2 onclick="listen()" style="display:none">Listen Again</button>
+	<P>
+	<Table id=hide border=0 width=600 height=50 cellspacing=10 style="display:none">
+	
+		
+	
+	<TR>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q1')" ><span id="q1" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q2')"><span id="q2" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q3')"><span id="q3" ></TD>
+	
+
+	</Table>
+    
+
+</div>
+</body>
+</html>
+<script>
+
+	
+function listen() {
+ 
+ var msg1 = document.getElementById("char").value;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[0];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+	
+function speak(msg1) {
+ 
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  window.speechSynthesis.speak(msg);
+
+}
+
+
+function myFunction(q) {
+  
+  
+  if (document.getElementById("char").value ==  document.getElementById(q).innerHTML)
+  {
+     document.getElementById("message").innerHTML =  "correct" ;
+	  speak("Correct");
+	document.getElementById("count").innerHTML = document.getElementById("count").innerHTML + 1;
+	document.getElementById("countNum").innerHTML = document.getElementById("count").innerHTML.length;
+	test();
+
+	}
+     else
+     {
+     document.getElementById("message").innerHTML =  "Wrong! Try again!" ;
+	 document.getElementById("count2").innerHTML = document.getElementById("count2").innerHTML + 1;
+	 document.getElementById("countNum2").innerHTML = document.getElementById("count2").innerHTML.length;
+	  speak("wrong");
+  }
+  
+}
+
+
+function test() {
+
+document.getElementById("text").innerHTML = "Next";
+
+
+var ranNum;
+ranNum = Math.floor(Math.random() * 198); 
+
+document.getElementById("char").selectedIndex = ranNum;
+
+
+
+
+answer =  document.getElementById("char")[ranNum].value ; 
+
+
+ranNum = Math.floor(Math.random() * 198); 
+
+document.getElementById("q1").innerHTML = document.getElementById("char")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 198); 
+
+document.getElementById("q2").innerHTML = document.getElementById("char")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 198); 
+
+document.getElementById("q3").innerHTML = document.getElementById("char")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 3); 
+
+
+
+  var fruits = ranNum;
+  
+
+  
+  switch(fruits) {
+    case 0:
+      document.getElementById("q1").innerHTML = answer;
+    break;
+    case 1:
+      document.getElementById("q2").innerHTML = answer;
+    break;
+    case 2:
+      document.getElementById("q3").innerHTML = answer;
+    break;
+    default:
+      document.getElementById("q1").innerHTML = answer;
+  }
+
+  
+
+ document.getElementById("hide").style.display = "inline";  
+document.getElementById("hide0").style.display = "inline";  
+document.getElementById("text2").style.display = "inline";  
+
+listen();
+
+
+}
+
+
+
+</script>

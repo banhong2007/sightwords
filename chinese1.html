@@ -1,0 +1,387 @@
+<html>
+
+<head>
+
+<style>
+
+span, button, TD {
+
+font-size:25pt;
+}
+
+
+</style>
+</head>
+<body>
+<P align=left><A href=index.html><strong>HOME</strong></A>
+<center>
+<P><select type=text id=char style="display:none">
+<option name=c1 value="上午">上午</option>
+<option name=c2 value="下午">下午</option>
+<option name=c3 value="下雨">下雨</option>
+<option name=c4 value="东西">东西</option>
+<option name=c5 value="中午">中午</option>
+<option name=c6 value="中国">中国</option>
+<option name=c7 value="什么">什么</option>
+<option name=c8 value="今天">今天</option>
+<option name=c9 value="儿子">儿子</option>
+<option name=c10 value="先生">先生</option>
+<option name=c11 value="再见">再见</option>
+<option name=c12 value="分钟">分钟</option>
+<option name=c13 value="前面">前面</option>
+<option name=c14 value="北京">北京</option>
+<option name=c15 value="医生">医生</option>
+<option name=c16 value="医院">医院</option>
+<option name=c17 value="同学">同学</option>
+<option name=c18 value="名字">名字</option>
+<option name=c19 value="哪儿">哪儿</option>
+<option name=c20 value="商店">商店</option>
+<option name=c21 value="喜欢">喜欢</option>
+<option name=c22 value="多少">多少</option>
+<option name=c23 value="天气">天气</option>
+<option name=c24 value="女儿">女儿</option>
+<option name=c25 value="妈妈">妈妈</option>
+<option name=c26 value="学习">学习</option>
+<option name=c27 value="学校">学校</option>
+<option name=c28 value="学生">学生</option>
+<option name=c29 value="小姐">小姐</option>
+<option name=c30 value="工作">工作</option>
+<option name=c31 value="怎么">怎么</option>
+<option name=c32 value="我们">我们</option>
+<option name=c33 value="时候">时候</option>
+<option name=c34 value="明天">明天</option>
+<option name=c35 value="星期">星期</option>
+<option name=c36 value="昨天">昨天</option>
+<option name=c37 value="朋友">朋友</option>
+<option name=c38 value="杯子">杯子</option>
+<option name=c39 value="桌子">桌子</option>
+<option name=c40 value="椅子">椅子</option>
+<option name=c41 value="汉语">汉语</option>
+<option name=c42 value="漂亮">漂亮</option>
+<option name=c43 value="爸爸">爸爸</option>
+<option name=c44 value="现在">现在</option>
+<option name=c45 value="电影">电影</option>
+<option name=c46 value="电脑">电脑</option>
+<option name=c47 value="电视">电视</option>
+<option name=c48 value="看见">看见</option>
+<option name=c49 value="睡觉">睡觉</option>
+<option name=c50 value="米饭">米饭</option>
+<option name=c51 value="老师">老师</option>
+<option name=c52 value="苹果">苹果</option>
+<option name=c53 value="衣服">衣服</option>
+<option name=c54 value="认识">认识</option>
+<option name=c55 value="说话">说话</option>
+<option name=c56 value="谢谢">谢谢</option>
+<option name=c57 value="这儿">这儿</option>
+<option name=c58 value="那儿">那儿</option>
+<option name=c59 value="飞机">飞机</option>
+<option name=c60 value="饭馆">饭馆</option>
+<option name=c61 value="高兴">高兴</option>
+<option name=c62 value="农村">农村</option>
+<option name=c63 value="冷静">冷静</option>
+<option name=c64 value="准时">准时</option>
+<option name=c65 value="准确">准确</option>
+<option name=c66 value="凉快">凉快</option>
+<option name=c67 value="减少">减少</option>
+<option name=c68 value="减肥">减肥</option>
+<option name=c69 value="出发">出发</option>
+<option name=c70 value="出差">出差</option>
+<option name=c71 value="出生">出生</option>
+<option name=c72 value="判断">判断</option>
+<option name=c73 value="到处">到处</option>
+<option name=c74 value="到底">到底</option>
+<option name=c75 value="制造">制造</option>
+<option name=c76 value="力气">力气</option>
+<option name=c77 value="加班">加班</option>
+<option name=c78 value="动作">动作</option>
+<option name=c79 value="勇敢">勇敢</option>
+<option name=c80 value="包括">包括</option>
+<option name=c81 value="区别">区别</option>
+<option name=c82 value="十分">十分</option>
+<option name=c83 value="千万">千万</option>
+<option name=c84 value="博士">博士</option>
+<option name=c85 value="印象">印象</option>
+<option name=c86 value="危险">危险</option>
+<option name=c87 value="即使">即使</option>
+<option name=c88 value="厉害">厉害</option>
+<option name=c89 value="压力">压力</option>
+<option name=c90 value="原因">原因</option>
+<option name=c91 value="原来">原来</option>
+<option name=c92 value="原谅">原谅</option>
+<option name=c93 value="参观">参观</option>
+<option name=c94 value="及时">及时</option>
+<option name=c95 value="友好">友好</option>
+<option name=c96 value="友谊">友谊</option>
+<option name=c97 value="反对">反对</option>
+<option name=c98 value="反映">反映</option>
+<option name=c99 value="发展">发展</option>
+<option name=c100 value="发生">发生</option>
+
+</select>
+
+<P><select type=text id=explain style="display:none">
+<option name=c1 value="morning;">morning;</option>
+<option name=c2 value="afternoon; p.m.;">afternoon; p.m.;</option>
+<option name=c3 value="to rain; rainy">to rain; rainy</option>
+<option name=c4 value="thing; stuff; person;,件[jian4]">thing; stuff; person;,件[jian4]</option>
+<option name=c5 value="noon; midday;">noon; midday;</option>
+<option name=c6 value="China; Middle Kingdom">China; Middle Kingdom</option>
+<option name=c7 value="what?; who?; something; anything">what?; who?; something; anything</option>
+<option name=c8 value="today; at the present; now">today; at the present; now</option>
+<option name=c9 value="son">son</option>
+<option name=c10 value="teacher; Mister (Mr.); husband; doctor (topolect);">teacher; Mister (Mr.); husband; doctor (topolect);</option>
+<option name=c11 value="goodbye; see you again later">goodbye; see you again later</option>
+<option name=c12 value="minute">minute</option>
+<option name=c13 value="ahead; in front; preceding; above">ahead; in front; preceding; above</option>
+<option name=c14 value="Beijing, capital of People's Republic of China; Peking; PRC government">Beijing, capital of People's Republic of China; Peking; PRC government</option>
+<option name=c15 value="doctor;,名[ming2]">doctor;,名[ming2]</option>
+<option name=c16 value="hospital; CL:所[suo3],家[jia1],座[zuo4]">hospital; CL:所[suo3],家[jia1],座[zuo4]</option>
+<option name=c17 value="(fellow) classmate; CL:位[wei4]">(fellow) classmate; CL:位[wei4]</option>
+<option name=c18 value="name (of a person or thing);">name (of a person or thing);</option>
+<option name=c19 value="where?; wherever; anywhere">where?; wherever; anywhere</option>
+<option name=c20 value="store; shop; CL:家[jia1]">store; shop; CL:家[jia1]</option>
+<option name=c21 value="to like; to be fond of">to like; to be fond of</option>
+<option name=c22 value="number; amount; somewhat">number; amount; somewhat</option>
+<option name=c23 value="weather">weather</option>
+<option name=c24 value="daughter">daughter</option>
+<option name=c25 value="mama; mommy; mother;">mama; mommy; mother;</option>
+<option name=c26 value="to learn; to study">to learn; to study</option>
+<option name=c27 value="school; CL:所[suo3]">school; CL:所[suo3]</option>
+<option name=c28 value="student; school child">student; school child</option>
+<option name=c29 value="young lady; miss;">young lady; miss;</option>
+<option name=c30 value="job; work; construction; task;,份[fen4]">job; work; construction; task;,份[fen4]</option>
+<option name=c31 value="how?; what?; why?">how?; what?; why?</option>
+<option name=c32 value="we; us; ourselves; our">we; us; ourselves; our</option>
+<option name=c33 value="time; length of time; moment; period">time; length of time; moment; period</option>
+<option name=c34 value="tomorrow">tomorrow</option>
+<option name=c35 value="week;">week;</option>
+<option name=c36 value="yesterday">yesterday</option>
+<option name=c37 value="friend;">friend;</option>
+<option name=c38 value="cup; glass;,支[zhi1],枝[zhi1]">cup; glass;,支[zhi1],枝[zhi1]</option>
+<option name=c39 value="table; desk; CL:張|张[zhang1],套[tao4]">table; desk; CL:張|张[zhang1],套[tao4]</option>
+<option name=c40 value="chair; CL:把[ba3],套[tao4]">chair; CL:把[ba3],套[tao4]</option>
+<option name=c41 value="Chinese language; CL:門|门[men2]">Chinese language; CL:門|门[men2]</option>
+<option name=c42 value="pretty; beautiful">pretty; beautiful</option>
+<option name=c43 value="(informal) father;">(informal) father;</option>
+<option name=c44 value="now; at present; at the moment; modern; current; nowadays">now; at present; at the moment; modern; current; nowadays</option>
+<option name=c45 value="movie; film; CL:部[bu4],片[pian4],幕[mu4],場|场[chang3]">movie; film; CL:部[bu4],片[pian4],幕[mu4],場|场[chang3]</option>
+<option name=c46 value="computer; CL:臺|台[tai2]">computer; CL:臺|台[tai2]</option>
+<option name=c47 value="television; TV; CL:臺|台[tai2]">television; TV; CL:臺|台[tai2]</option>
+<option name=c48 value="to see; to catch sight of">to see; to catch sight of</option>
+<option name=c49 value="to go to bed; to go to sleep">to go to bed; to go to sleep</option>
+<option name=c50 value="(cooked) rice">(cooked) rice</option>
+<option name=c51 value="teacher;">teacher;</option>
+<option name=c52 value="apple;,顆|颗[ke1]">apple;,顆|颗[ke1]</option>
+<option name=c53 value="clothes; CL:件[jian4],套[tao4]">clothes; CL:件[jian4],套[tao4]</option>
+<option name=c54 value="to know; to recognize; to be familiar with; acquainted with sth; knowledge; understanding; awareness; cognition">to know; to recognize; to be familiar with; acquainted with sth; knowledge; understanding; awareness; cognition</option>
+<option name=c55 value="to speak; to say; to talk; to gossip; to tell stories; talk; word">to speak; to say; to talk; to gossip; to tell stories; talk; word</option>
+<option name=c56 value="to thank; thanks">to thank; thanks</option>
+<option name=c57 value="here">here</option>
+<option name=c58 value="there">there</option>
+<option name=c59 value="airplane; CL: 架[jia4]">airplane; CL: 架[jia4]</option>
+<option name=c60 value="restaurant; CL:家[jia1]">restaurant; CL:家[jia1]</option>
+<option name=c61 value="happy; glad; willing (to do sth); in a cheerful mood">happy; glad; willing (to do sth); in a cheerful mood</option>
+<option name=c62 value="rural area; village;">rural area; village;</option>
+<option name=c63 value="calm; cool-headed">calm; cool-headed</option>
+<option name=c64 value="on time; punctual; on schedule">on time; punctual; on schedule</option>
+<option name=c65 value="accurate; exact; precise">accurate; exact; precise</option>
+<option name=c66 value="nice and cold; pleasantly cool">nice and cold; pleasantly cool</option>
+<option name=c67 value="to lessen; to decrease; to reduce; to lower">to lessen; to decrease; to reduce; to lower</option>
+<option name=c68 value="to lose weight">to lose weight</option>
+<option name=c69 value="to start out; to set off">to start out; to set off</option>
+<option name=c70 value="to go on an official or business trip">to go on an official or business trip</option>
+<option name=c71 value="to be born">to be born</option>
+<option name=c72 value="to decide; to determine;">to decide; to determine;</option>
+<option name=c73 value="in all places; everywhere">in all places; everywhere</option>
+<option name=c74 value="finally; in the end; when all is said and done; after all; to the end; to the last">finally; in the end; when all is said and done; after all; to the end; to the last</option>
+<option name=c75 value="to manufacture; to make">to manufacture; to make</option>
+<option name=c76 value="strength; CL:把[ba3]">strength; CL:把[ba3]</option>
+<option name=c77 value="to work overtime">to work overtime</option>
+<option name=c78 value="movement; motion; action;">movement; motion; action;</option>
+<option name=c79 value="brave; courageous">brave; courageous</option>
+<option name=c80 value="to comprise; to include; to involve; to incorporate; to consist of">to comprise; to include; to involve; to incorporate; to consist of</option>
+<option name=c81 value="difference; to distinguish; to discriminate; to make a distinction;">difference; to distinguish; to discriminate; to make a distinction;</option>
+<option name=c82 value="to divide into ten equal parts; very; hundred percent; completely; extremely; utterly; absolutely">to divide into ten equal parts; very; hundred percent; completely; extremely; utterly; absolutely</option>
+<option name=c83 value="ten million; countless; many; one must by all means">ten million; countless; many; one must by all means</option>
+<option name=c84 value="doctor; court academician (in feudal China); Ph.D.">doctor; court academician (in feudal China); Ph.D.</option>
+<option name=c85 value="impression; reflection; perception;">impression; reflection; perception;</option>
+<option name=c86 value="danger; dangerous">danger; dangerous</option>
+<option name=c87 value="even if; even though; given that">even if; even though; given that</option>
+<option name=c88 value="difficult to deal with; difficult to endure; ferocious; radical; serious; terrible; violent; tremendous; awesome">difficult to deal with; difficult to endure; ferocious; radical; serious; terrible; violent; tremendous; awesome</option>
+<option name=c89 value="pressure">pressure</option>
+<option name=c90 value="cause; origin; root cause; reason;">cause; origin; root cause; reason;</option>
+<option name=c91 value="original; former; originally; formerly; at first; so... actually">original; former; originally; formerly; at first; so... actually</option>
+<option name=c92 value="to excuse; to forgive; to pardon">to excuse; to forgive; to pardon</option>
+<option name=c93 value="to look around; to inspect; visit and observe">to look around; to inspect; visit and observe</option>
+<option name=c94 value="in time; promptly; without delay; timely">in time; promptly; without delay; timely</option>
+<option name=c95 value="friendly; amicable">friendly; amicable</option>
+<option name=c96 value="companionship; fellowship; friendship">companionship; fellowship; friendship</option>
+<option name=c97 value="to fight against; to oppose; to be opposed to; opposition">to fight against; to oppose; to be opposed to; opposition</option>
+<option name=c98 value="to mirror; to reflect; mirror image; reflection; fig. to report; to make known; to render; used erroneously for 反應|反应, response or reaction">to mirror; to reflect; mirror image; reflection; fig. to report; to make known; to render; used erroneously for 反應|反应, response or reaction</option>
+<option name=c99 value="development; growth; to develop; to grow; to expand">development; growth; to develop; to grow; to expand</option>
+<option name=c100 value="to happen; to occur; to take place; to break out">to happen; to occur; to take place; to break out</option>
+
+</select>	
+
+<button id=text onclick="test()" >Try</button>
+<P>
+	<Table id=hide0 border=0 style="display:none">	
+	<TR>
+<TD>Number of Correct Attempts : <span id=count style="display:none"></span><span id=countNum></span>
+<TR>
+<TD>Number of Wrong Attempts : <span id=count2 style="display:none"></span><span id=countNum2></span>
+</Table>		
+		<P>
+		<span id=answer></span>
+		</P>
+		<P>
+		<span id=message></span>
+		</P>
+		
+		
+	
+	<button id=text2 onclick="listen()" style="display:none">Listen Again</button>
+	<P>
+	<Table id=hide border=0 width=600 height=50 cellspacing=10 style="display:none">
+	
+	<TR>
+	<TD  width=200 height=100 align=center  ><span id="a1" >Meaning : </TD>
+	<TD colspan=2 width=400 height=100 align=left ><span id="a2" ></TD>
+	
+	
+	
+	<TR>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q1')" ><span id="q1" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q2')"><span id="q2" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q3')"><span id="q3" ></TD>
+	
+
+	</Table>
+    
+
+</div>
+</body>
+</html>
+<script>
+
+	
+function listen() {
+ 
+ var msg1 = document.getElementById("char").value;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[49];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[18];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+	
+function speak(msg1) {
+ 
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+ msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[0];
+	}
+  window.speechSynthesis.speak(msg);
+
+}
+
+
+function myFunction(q) {
+  
+  if (document.getElementById("char").value ==  document.getElementById(q).innerHTML)
+  {
+     document.getElementById("message").innerHTML =  "correct" ;
+	  speak("Correct");
+	document.getElementById("count").innerHTML = document.getElementById("count").innerHTML + 1;
+	document.getElementById("countNum").innerHTML = document.getElementById("count").innerHTML.length;
+	test();
+
+	}
+     else
+     {
+     document.getElementById("message").innerHTML =  "Wrong! Try again`" ;
+	 document.getElementById("count2").innerHTML = document.getElementById("count2").innerHTML + 1;
+	 	document.getElementById("countNum2").innerHTML = document.getElementById("count2").innerHTML.length;
+	  speak("wrong");
+  }
+}
+
+
+function test() {
+
+document.getElementById("text").innerHTML = "Next";
+
+
+var ranNum;
+ranNum = Math.floor(Math.random() * 100); 
+
+document.getElementById("char").selectedIndex = ranNum;
+
+document.getElementById("explain").selectedIndex = ranNum;
+
+
+
+ document.getElementById("a2").innerHTML = document.getElementById("explain").value;
+
+answer =  document.getElementById("char")[ranNum].value ; 
+
+listen();
+ranNum = Math.floor(Math.random() * 100); 
+
+document.getElementById("q1").innerHTML = document.getElementById("char")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 100); 
+
+document.getElementById("q2").innerHTML = document.getElementById("char")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 100); 
+
+document.getElementById("q3").innerHTML = document.getElementById("char")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 3); 
+
+
+
+  var fruits = ranNum;
+  
+
+  
+  switch(fruits) {
+    case 0:
+      document.getElementById("q1").innerHTML = answer;
+    break;
+    case 1:
+      document.getElementById("q2").innerHTML = answer;
+    break;
+    case 2:
+      document.getElementById("q3").innerHTML = answer;
+    break;
+    default:
+      document.getElementById("q1").innerHTML = answer;
+  }
+
+  
+
+ document.getElementById("hide").style.display = "inline";  
+document.getElementById("hide0").style.display = "inline";  
+document.getElementById("text2").style.display = "inline";  
+
+
+
+}
+
+
+
+</script>

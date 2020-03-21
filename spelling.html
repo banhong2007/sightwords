@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+TD, span {
+  width: 10px;
+  height: 20px;
+  padding: 2px;
+  border: 0;
+  font-size:25pt;
+ 
+}
+
+button {
+  background: none;
+font-size:25pt;
+order-radius: 12px;
+
+
+}
+
+
+</style>
+<script>
+var txt = "";
+
+	
+function listen() {
+ 
+ var msg1 = document.getElementById("char").value;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[2];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+	
+function speak(msg1) {
+ 
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  window.speechSynthesis.speak(msg);
+
+}
+
+function myFunction() {
+  
+
+ 
+ var str = document.getElementById("char").value ; 
+  txt = "";
+ for (i = 0; i < str.length; i++) { 
+   var element = "div2" + i;
+   txt = txt + document.getElementById(element).innerHTML; 
+}
+
+document.getElementById("demo").innerHTML = txt; 
+
+var answer = document.getElementById("demo").innerHTML;
+
+
+  if (document.getElementById("char").value ==  answer )
+  {
+     document.getElementById("message").innerHTML =  "correct" ;
+	  speak("Correct");
+	document.getElementById("count").innerHTML = document.getElementById("count").innerHTML + 1;
+	document.getElementById("countNum").innerHTML = document.getElementById("count").innerHTML.length;
+	start();
+
+	}
+     else
+     {
+     document.getElementById("message").innerHTML =  "Wrong! Try again!" ;
+	 document.getElementById("count2").innerHTML = document.getElementById("count2").innerHTML + 1;
+	 document.getElementById("countNum2").innerHTML = document.getElementById("count2").innerHTML.length;
+	  speak("wrong");
+  }
+  
+
+
+
+}
+
+function start() {
+
+
+
+
+document.getElementById("dd").style.display = "inline";  
+
+ 
+document.getElementById("demo").innerHTML =""
+var list = document.getElementById("TR1");
+
+// As long as <ul> has a child node, remove it
+while (list.hasChildNodes()) {   
+  list.removeChild(list.firstChild);
+}
+  
+var list = document.getElementById("TR2");
+
+// As long as <ul> has a child node, remove it
+while (list.hasChildNodes()) {   
+  list.removeChild(list.firstChild);
+} 
+
+
+
+var ranNum;
+ranNum = Math.floor(Math.random() * 99); 
+
+document.getElementById("char").selectedIndex = ranNum;
+
+answer =  document.getElementById("char")[ranNum].value ; 
+
+ 
+ var str = answer
+var fruits = [];     
+ for (i = 0; i < str.length; i++) { 
+
+  
+    var text = str.charAt(i);
+	fruits.push(text);
+   
+ 
+}
+
+fruits.sort();
+
+
+  
+for (i = 0; i < str.length; i++) { 
+
+  
+  
+    var text = fruits[i];
+   
+  
+ var image = document.createElement("TD");
+   
+      image.id = "img1" + i;
+ image.innerHTML = text;	  
+ 	  image.draggable = "true";
+      
+var element = document.getElementById("TR1");
+element.appendChild(image);   
+   
+document.addEventListener("dragstart", function(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+  
+});
+
+
+ var image1 = document.createElement("TD");
+
+      image1.id = "div2" + i;
+	  image1.style = "border: 1px solid #aaaaaa;  width: 30px;  height: 40px; box-shadow: 5px 5px 5px #888888;padding:10px;align:center";
+
+
+var element = document.getElementById("TR2");
+element.appendChild(image1); 
+      
+document.addEventListener("dragover", function(event) {
+  event.preventDefault();
+});
+
+document.addEventListener("drop", function(event) {
+  event.preventDefault();
+    var data = event.dataTransfer.getData("Text");
+    event.target.appendChild(document.getElementById(data));
+});
+
+ } 
+  
+  listen();
+
+
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+
+
+</script>
+</script>
+</head>
+<body>
+
+<p id="demo"></p>
+<P><select type=text id=char style="display:none">
+<option name=c1 value="about">about</option>
+<option name=c2 value="all">all</option>
+<option name=c3 value="an">an</option>
+<option name=c4 value="and">and</option>
+<option name=c5 value="are">are</option>
+<option name=c6 value="as">as</option>
+<option name=c7 value="at">at</option>
+<option name=c8 value="be">be</option>
+<option name=c9 value="been">been</option>
+<option name=c10 value="but">but</option>
+<option name=c11 value="by">by</option>
+<option name=c12 value="called">called</option>
+<option name=c13 value="can">can</option>
+<option name=c14 value="come">come</option>
+<option name=c15 value="could">could</option>
+<option name=c16 value="day">day</option>
+<option name=c17 value="did">did</option>
+<option name=c18 value="do">do</option>
+<option name=c19 value="down">down</option>
+<option name=c20 value="each">each</option>
+<option name=c21 value="find">find</option>
+<option name=c22 value="first">first</option>
+<option name=c23 value="for">for</option>
+<option name=c24 value="from">from</option>
+<option name=c25 value="get">get</option>
+<option name=c26 value="go">go</option>
+<option name=c27 value="had">had</option>
+<option name=c28 value="has">has</option>
+<option name=c29 value="have">have</option>
+<option name=c30 value="he">he</option>
+<option name=c31 value="her">her</option>
+<option name=c32 value="him">him</option>
+<option name=c33 value="his">his</option>
+<option name=c34 value="how">how</option>
+<option name=c35 value="I">I</option>
+<option name=c36 value="if">if</option>
+<option name=c37 value="in">in</option>
+<option name=c38 value="into">into</option>
+<option name=c39 value="is">is</option>
+<option name=c40 value="it">it</option>
+<option name=c41 value="like">like</option>
+<option name=c42 value="long">long</option>
+<option name=c43 value="look">look</option>
+<option name=c44 value="made">made</option>
+<option name=c45 value="make">make</option>
+<option name=c46 value="many">many</option>
+<option name=c47 value="may">may</option>
+<option name=c48 value="more">more</option>
+<option name=c49 value="my">my</option>
+<option name=c50 value="no">no</option>
+<option name=c51 value="not">not</option>
+<option name=c52 value="now">now</option>
+<option name=c53 value="number">number</option>
+<option name=c54 value="of">of</option>
+<option name=c55 value="oil">oil</option>
+<option name=c56 value="on">on</option>
+<option name=c57 value="one">one</option>
+<option name=c58 value="or">or</option>
+<option name=c59 value="other">other</option>
+<option name=c60 value="out">out</option>
+<option name=c61 value="part">part</option>
+<option name=c62 value="people">people</option>
+<option name=c63 value="said">said</option>
+<option name=c64 value="see">see</option>
+<option name=c65 value="she">she</option>
+<option name=c66 value="sit">sit</option>
+<option name=c67 value="so">so</option>
+<option name=c68 value="some">some</option>
+<option name=c69 value="than">than</option>
+<option name=c70 value="that">that</option>
+<option name=c71 value="the">the</option>
+<option name=c72 value="their">their</option>
+<option name=c73 value="them">them</option>
+<option name=c74 value="then">then</option>
+<option name=c75 value="there">there</option>
+<option name=c76 value="these">these</option>
+<option name=c77 value="they">they</option>
+<option name=c78 value="this">this</option>
+<option name=c79 value="time">time</option>
+<option name=c80 value="to">to</option>
+<option name=c81 value="two">two</option>
+<option name=c82 value="up">up</option>
+<option name=c83 value="use">use</option>
+<option name=c84 value="was">was</option>
+<option name=c85 value="water">water</option>
+<option name=c86 value="way">way</option>
+<option name=c87 value="we">we</option>
+<option name=c88 value="were">were</option>
+<option name=c89 value="what">what</option>
+<option name=c90 value="when">when</option>
+<option name=c91 value="which">which</option>
+<option name=c92 value="who">who</option>
+<option name=c93 value="will">will</option>
+<option name=c94 value="with">with</option>
+<option name=c95 value="words">words</option>
+<option name=c96 value="would">would</option>
+<option name=c97 value="write">write</option>
+<option name=c98 value="you">you</option>
+<option name=c99 value="your">your</option>
+
+
+</select>
+<center>
+<P><button id="click" onclick="start()" >
+<svg height="120" width="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+      style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="60" rx="85" ry="50" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana"
+  x="50" y="75">Start</text>
+
+
+</button>	
+<div id=dd  style="display:none">
+<P >Number of Correct Attempts : <span id=count style="display:none"></span><span id=countNum></span>
+<BR >Number of Wrong Attempts : <span id=count2 style="display:none"></span><span id=countNum2></span>
+
+<p>Drag the character to the box</p>
+
+<button id=text2 onclick="listen()">Listen Again</button></P>
+
+<TABLE id=TH1>
+<TR id=TR1>
+
+</TR>
+</Table id=TH2>
+<br>
+
+<TABLE>
+<TR id=TR2>
+</TR>
+</Table>
+
+<P><button id="click" onclick="myFunction()" >
+
+<svg height="120" width="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+      style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="60" rx="100" ry="50" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana"
+  x="30" y="75">Submit</text>
+</svg>
+</button>
+
+
+	<P>
+		<span id=answer></span>
+		</P>
+		<P>
+		<span id=message></span>
+		</P>
+		
+</div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drag and Drop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	
+<style>
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+#drop_zone {
+    background-color: #eee;
+    border: #999 1px solid ;
+    width: 880px;
+    height: 100px;
+    padding: 8px;
+    font-size: 19px;
+  }
+
+span, button, td {
+	font-size:20pt;
+      padding: 8px;
+}
+
+</style>  
+	
+</head>
+
+<body>
+<center>
+<P><select type=text id=char style="display:none">
+
+
+<option name=c1 value="salamander">salamander</option>
+<option name=c2 value="dirtiest">dirtiest</option>
+<option name=c3 value="electric eel">electic eel</option>
+<option name=c4 value="deepest">deepest</option>
+<option name=c5 value="freshwater">freshwater</option>
+<option name=c6 value="predators">predators</option>
+<option name=c7 value="endangered">endangered</option>
+<option name=c8 value="habitat">habitat</option>
+
+
+
+</select>
+<P>
+<button id="click" onclick="start()" >
+Start
+</button>	
+
+<div id=dd  style="display:none">
+<Table width=600>
+
+<TR>
+
+<TD ><button id=text2 onclick="listen()">Listen Again</button></TD>
+
+<TD>
+Number of Correct Attempts : <span id=count style="display:none"></span><span id=countNum></span>
+<BR>
+Number of Wrong Attempts : <span id=count2 style="display:none"></span><span id=countNum2></span>
+
+</Table>
+    <span id="app_status">Drag status: </span>
+    <h2>Drop the letter into the box below to spell the words you heard</h2>
+	
+	    <div id="drop_zone" ondragover="return false"></div>
+	
+	<table>
+	<TR id=TR1>
+	</TR>
+	</table>
+	
+<span id=answer></span>
+	
+<BR><span id=message></span>
+		
+<P><button id="click" onclick="myFunction()" >
+Submit
+</button>
+
+</div>
+</body>
+
+</html>
+
+<script>
+
+
+
+function listen() {
+ 
+ var msg1 = document.getElementById("char").value;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[2];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+
+function _(id) {
+    return document.getElementById(id);
+}
+
+var droppedIn = false;
+
+
+function start() {
+
+document.getElementById("dd").style.display = "inline";  
+var list = document.getElementById("TR1");
+
+// As long as <ul> has a child node, remove it
+while (list.hasChildNodes()) {   
+  list.removeChild(list.firstChild);
+}
+ 
+
+
+var list = document.getElementById("drop_zone");
+
+// As long as <ul> has a child node, remove it
+while (list.hasChildNodes()) {   
+  list.removeChild(list.firstChild);
+} 
+    // Drag zone functionality
+  
+    function handleDragEnter(e) {
+        _('app_status').innerHTML = "You are dragging over the " + e
+            .target
+            .getAttribute('id');
+    }
+
+    function handleDragLeave(e) {
+        _('app_status').innerHTML = "You left the " + e
+            .target
+            .getAttribute('id');
+    }
+
+    function handleDragDrop(e) {
+        e.preventDefault();
+		
+        var element_id = e
+            .dataTransfer
+            .getData("text");
+        e
+            .target
+            .appendChild(_(element_id));
+        _(element_id).removeAttribute("draggable")
+        _(element_id).style.cursor = "default";
+        droppedIn = true;
+        _('app_status').innerHTML = "You droped " + element_id + " into drop zone";
+    }
+
+ 
+var ranNum;
+ranNum = Math.floor(Math.random() * 8); 
+
+document.getElementById("char").selectedIndex = ranNum;
+
+answer =  document.getElementById("char")[ranNum].value ; 
+
+ var str = answer;
+ 
+ listen();
+var fruits = [];     
+ for (i = 0; i < str.length; i++) { 
+
+  
+    var text = str.charAt(i);
+	fruits.push(text);
+   
+ 
+}
+
+fruits.sort();
+
+ 
+   var dropZone = _('drop_zone');
+
+    dropZone.addEventListener('dragenter', handleDragEnter, false);
+    dropZone.addEventListener('dragleave', handleDragLeave, false);
+    dropZone.addEventListener('drop', handleDragDrop, false);
+
+
+ for (i = 0; i < str.length; i++) { 
+
+    var text = fruits[i];
+     var object = document.createElement("TD");
+         object.id = "object" + i;
+		 object.class ="objects";
+		 
+		   object.style = "display: inline-block; background-color: #FFF3CC; border: #DFBC6A 1px solid; width: 40px; height: 40px;  margin: 10px; padding: 8px; font-size: 35px;  text-align: center; box-shadow: 2px 2px 2px #999;  cursor: move;"
+		   object.draggable = "true";
+		   object.innerHTML = text;
+var element = document.getElementById("TR1");
+element.appendChild(object);
+  
+  var activeEvent = '';
+    var originalX = '';
+    var originalY = '';
+ 
+    object.addEventListener('dragstart', handleDragStart, false);
+    object.addEventListener('dragend', handleDragEnd, false);
+    object.addEventListener('touchstart', handleTouchStart, false);
+    object.addEventListener('touchmove', handleTouchMove, false);
+    object.addEventListener('touchend', handleTouchEnd, false);
+  
+ 
+
+ 
+}
+
+    
+    function handleDragStart(e) {
+        _('app_status').innerHTML = "Dragging the element " + e
+            .target
+            .getAttribute('id');
+        e.dataTransfer.dropEffect = "move";
+        e
+            .dataTransfer
+            .setData("text", e.target.getAttribute('id'));
+    }
+
+    function handleDragEnd(e) {
+        if (droppedIn == false) {
+            _('app_status').innerHTML = "You let the " + e
+                .target
+                .getAttribute('id') + " go.";
+        }
+        droppedIn = false;
+    }
+
+    function handleTouchStart(e) {
+        _('app_status').innerHTML = "Touch start with element " + e
+            .target
+            .getAttribute('id');
+        originalX = (e.target.offsetLeft - 10) + "px";
+        originalY = (e.target.offsetTop - 10) + "px";
+        activeEvent = 'start';
+    }
+
+    function handleTouchMove(e) {
+        var touchLocation = e.targetTouches[0];
+        var pageX = (touchLocation.pageX - 50) + "px";
+        var pageY = (touchLocation.pageY - 50) + "px";
+        _('app_status').innerHTML = "Touch x " + pageX + " Touch y " + pageY;
+        e.target.style.position = "absolute";
+        e.target.style.left = pageX;
+        e.target.style.top = pageY;
+        activeEvent = 'move';
+    }
+
+    function handleTouchEnd(e) {
+        e.preventDefault();
+        if (activeEvent === 'move') {
+            var pageX = (parseInt(e.target.style.left) - 50);
+            var pageY = (parseInt(e.target.style.top) - 50);
+
+            if (detectTouchEnd(dropZone.offsetLeft, dropZone.offsetTop, pageX, pageY, dropZone.offsetWidth, dropZone.offsetHeight)) {
+                dropZone.appendChild(e.target);
+                e.target.style.position = "initial";
+                droppedIn = true;
+                _('app_status').innerHTML = "You droped " + e
+                    .target
+                    .getAttribute('id') + " into drop zone";
+            } else {
+                e.target.style.left = originalX;
+                e.target.style.top = originalY;
+                _('app_status').innerHTML = "You let the " + e
+                    .target
+                    .getAttribute('id') + " go.";
+            }
+        }
+    }
+
+    function detectTouchEnd(x1, y1, x2, y2, w, h) {
+        //Very simple detection here
+        if (x2 - x1 > w) 
+            return false;
+        if (y2 - y1 > h) 
+            return false;
+        return true;
+    }
+}
+
+	
+function speak(msg1) {
+ 
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  window.speechSynthesis.speak(msg);
+
+}
+
+function myFunction() {
+  
+  document.getElementById("answer").innerHTML = document.getElementById("drop_zone").innerHTML ;
+  var str = document.getElementById("char").value ; 
+
+  
+
+var answer = document.getElementById("answer").innerHTML ;
+
+
+  if (document.getElementById("char").value ==  answer )
+  {
+     document.getElementById("message").innerHTML =  "correct" ;
+	  speak("Correct");
+	document.getElementById("count").innerHTML = document.getElementById("count").innerHTML + 1;
+	document.getElementById("countNum").innerHTML = document.getElementById("count").innerHTML.length;
+	start();
+
+	}
+     else
+     {
+     document.getElementById("message").innerHTML =  "Wrong! Try again!" ;
+	 document.getElementById("count2").innerHTML = document.getElementById("count2").innerHTML + 1;
+	 document.getElementById("countNum2").innerHTML = document.getElementById("count2").innerHTML.length;
+	  speak("wrong");
+  }
+  
+
+
+  
+
+
+
+  
+  
+  }
+
+
+</script>

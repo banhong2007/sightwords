@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+article {
+    width: 60%;
+    margin: auto;
+}
+blockquote,
+div,
+h1 {
+    text-align: center;
+}
+blockquote {
+    font-size: 1.2rem;
+}
+.btn {
+        background-color: #eee;
+        background-image: linear-gradient(to bottom,#fcfcfc 0,#eee 100%);
+        border-radius: 3px;
+        border: 1px solid #d5d5d5;
+        color: #333;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+        font-size: .5rem;
+        font-weight: bold;
+        padding: 4px 6px 4px 6px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 #fff;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    outline: none;
+    padding: 0;
+    width: 48px;
+}
+html {
+    font-size: 16pt;
+    font-family: crimson text;
+}
+
+#play {
+	background-image: url(play.svg);
+
+	
+}
+#play.played {
+	background-image: url(play1.svg);
+}
+#pause {
+	background-image: url(pause.svg);
+}
+#pause.paused {
+	background-image: url(pause1.svg);
+}
+#stop {
+    background-image: url(stop.svg);
+}
+#stop.stopped {
+    background-image: url(stop1.svg);
+}
+@media (max-width: 700px) {
+    html {
+        font-size: 14pt;
+    }
+    article {
+        width: 90%;
+    }
+}
+
+</style>
+<head>
+	<link rel="shortcut icon" href="http://bit.ly/ghfavicon" width=32px>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="prefetch" href="pause1.svg">
+	<link rel="prefetch" href="play1.svg">
+	<link rel="prefetch" href="stop1.svg">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Fry List</title>
+</head>
+
+<body>
+<P align=left><A href=english.html><strong>Pri 1 English Level 1</strong></A>
+<BR align=left><A href=english2.html><strong>Pri 1 English Level 2 </strong></A>
+<BR align=left><A href=chinese.html><strong>Pri 1 Chinese Level 1</strong></A>
+<BR align=left><A href=chinese1.html><strong>Pri 1 Chinese Level 2</strong></A>
+
+<P align=left><A href=english3.html><strong>Pri 5 English Level 1</strong></A>
+<BR align=left><A href=english4.html><strong>Pri 5 English Level 2</strong></A>
+<BR align=left><A href=chinese2.html><strong>Pri 5 Chinese Level 1</strong></A>
+<BR align=left><A href=chinese3.html><strong>Pri 5 Chinese Level 2</strong></A>
+<BR align=left><A href=chinese-2char.html><strong>Pri 5 Chinese 2 char</strong></A>
+<BR align=left><A href=chinese-3char.html><strong>Pri 5 Chinese 3 char</strong></A>
+
+
+
+<center>
+	<P>Click on the <b>Play</b> button to start</P>
+	<div>
+		<button id=play>Play</button>  &nbsp;
+		<button id=pause>Pause</button> &nbsp;
+		<button id=stop>Next</button>
+	</div>
+	<article>
+	
+	<span id=demo ></span>
+	
+
+	</article>
+	
+	<span id=text></span>
+	
+	<Table border=0 width=500 height=50 cellspacing=10>
+	<TR>
+	
+	
+	<Table id=hide border=0 width=600 height=50 cellspacing=10>
+	<TR>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q1')" ><span id="q1" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q2')"><span id="q2" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q3')"><span id="q3" ></TD>
+	
+
+	</Table>
+    
+    <script>
+
+	
+function speak(msg1) {
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  window.speechSynthesis.speak(msg);
+
+}
+
+function myFunction(q) {
+  
+  if (document.getElementById("demo").innerHTML ==  document.getElementById(q).innerHTML)
+  {
+     document.getElementById("text").innerHTML =  "correct" ;
+	  speak("Correct");
+	location.reload();
+     }
+     else
+     {
+     document.getElementById("text").innerHTML =  "wrong" ;
+	  speak("wrong");
+  }
+}
+
+onload = function() {
+	
+	
+
+var frylist =["a","about","all","an","and","are","as","at","be","been","but","by","called","can","come","could","day","did","do","down","each","find","first","for","from","get","go","had","has","have","he","her","him","his","how","I","if","in","into","is","it","like","long","look","made","make","many","may","more","my","no","not","now","number","of","oil","on","one","or","other","out","part","people","said","see","she","sit","so","some","than","that","the","their","them","then","there","these","they","this","time","to","two","up","use","was","water","way","we","were","what","when","which","who","will","with","words","would","write","you","your"];
+
+
+var ranNum;
+ranNum = Math.floor(Math.random() * 99); 
+document.getElementById("demo").innerHTML = frylist[ranNum];
+
+answer = document.getElementById("demo").innerHTML; 
+
+ranNum = Math.floor(Math.random() * 99); 
+
+document.getElementById("q1").innerHTML = frylist[ranNum];
+
+
+ranNum = Math.floor(Math.random() * 99); 
+
+document.getElementById("q2").innerHTML = frylist[ranNum];
+ranNum = Math.floor(Math.random() * 99); 
+
+document.getElementById("q3").innerHTML = frylist[ranNum];
+
+ranNum = Math.floor(Math.random() * 3); 
+
+document.getElementById("demo").style.display = "none"; 
+
+document.getElementById("hide").style.display = "none";   
+
+
+document.getElementById("stop").style.display = "none";   
+
+document.getElementById("pause").style.display = "none";   
+
+  var fruits = ranNum;
+  
+
+  
+  switch(fruits) {
+    case 0:
+      document.getElementById("q1").innerHTML = answer;
+    break;
+    case 1:
+      document.getElementById("q2").innerHTML = answer;
+    break;
+    case 2:
+      document.getElementById("q3").innerHTML = answer;
+    break;
+    default:
+      document.getElementById("q1").innerHTML = answer;
+  }
+
+  
+	
+    if ('speechSynthesis' in window) with(speechSynthesis) {
+
+
+        var playEle = document.querySelector('#play');
+        var pauseEle = document.querySelector('#pause');
+        var stopEle = document.querySelector('#stop');
+        var flag = false;
+
+
+        playEle.addEventListener('click', onClickPlay);
+        pauseEle.addEventListener('click', onClickPause);
+        stopEle.addEventListener('click', onClickStop);
+
+        function onClickPlay() {
+		
+		document.getElementById("hide").style.display = "inline"; 
+		
+		document.getElementById("stop").style.display = "inline";   
+		
+		document.getElementById("pause").style.display = "inline"; 
+		
+            if(!flag){
+                flag = true;
+                utterance = new SpeechSynthesisUtterance(document.querySelector('article').textContent);
+                utterance.voice = getVoices()[3];
+                utterance.onend = function(){
+                    flag = false; playEle.className = pauseEle.className = ''; stopEle.className = 'stopped';
+                };
+                playEle.className = 'played';
+                stopEle.className = '';
+                speak(utterance);
+            }
+             if (paused) { /* unpause/resume narration */
+                playEle.className = 'played';
+                pauseEle.className = '';
+                resume();
+            } 
+        }
+
+        function onClickPause() {
+            if(speaking && !paused){ /* pause narration */
+                pauseEle.className = 'paused';
+                playEle.className = '';
+                pause();
+            }
+        }
+
+        function onClickStop() {
+            
+			location.reload();
+        }
+		
+	
+
+    }
+
+    else { /* speech synthesis not supported */
+        msg = document.createElement('h5');
+        msg.textContent = "Detected no support for Speech Synthesis";
+        msg.style.textAlign = 'center';
+        msg.style.backgroundColor = 'red';
+        msg.style.color = 'white';
+        msg.style.marginTop = msg.style.marginBottom = 0;
+        document.body.insertBefore(msg, document.querySelector('div'));
+    }
+
+	
+	
+}
+
+
+</script>
+</body>
+
+</html>

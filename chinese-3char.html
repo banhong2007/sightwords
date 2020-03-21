@@ -1,0 +1,490 @@
+<html>
+
+<head>
+
+<style>
+
+span, button, td {
+
+font-size:25pt;
+}
+
+
+</style>
+</head>
+<body>
+<P align=left><A href=index.html><strong>HOME</strong></A>
+<center>
+<P><select type=text id=char style="display:none">
+<option name=c1 value="不客气">不客气</option>
+<option name=c2 value="出租车">出租车</option>
+<option name=c3 value="对不起">对不起</option>
+<option name=c4 value="怎么样">怎么样</option>
+<option name=c5 value="打电话">打电话</option>
+<option name=c6 value="没关系">没关系</option>
+<option name=c7 value="火车站">火车站</option>
+<option name=c8 value="为什么">为什么</option>
+<option name=c9 value="打篮球">打篮球</option>
+<option name=c10 value="服务员">服务员</option>
+<option name=c11 value="自行车">自行车</option>
+<option name=c12 value="踢足球">踢足球</option>
+<option name=c13 value="一会儿">一会儿</option>
+<option name=c14 value="办公室">办公室</option>
+<option name=c15 value="图书馆">图书馆</option>
+<option name=c16 value="普通话">普通话</option>
+<option name=c17 value="洗手间">洗手间</option>
+<option name=c18 value="热情 ">热情 </option>
+<option name=c19 value="照相机">照相机</option>
+<option name=c20 value="行李箱">行李箱</option>
+<option name=c21 value="不得不">不得不</option>
+<option name=c22 value="乒乓球">乒乓球</option>
+<option name=c23 value="人民币">人民币</option>
+<option name=c24 value="信用卡">信用卡</option>
+<option name=c25 value="做生意">做生意</option>
+<option name=c26 value="加油站">加油站</option>
+<option name=c27 value="受不了">受不了</option>
+<option name=c28 value="售货员">售货员</option>
+<option name=c29 value="垃圾桶">垃圾桶</option>
+<option name=c30 value="塑料袋">塑料袋</option>
+<option name=c31 value="大使馆">大使馆</option>
+<option name=c32 value="巧克力">巧克力</option>
+<option name=c33 value="差不多">差不多</option>
+<option name=c34 value="开玩笑">开玩笑</option>
+<option name=c35 value="弹钢琴">弹钢琴</option>
+<option name=c36 value="放暑假">放暑假</option>
+<option name=c37 value="来不及">来不及</option>
+<option name=c38 value="来得及">来得及</option>
+<option name=c39 value="洗衣机">洗衣机</option>
+<option name=c40 value="研究生">研究生</option>
+<option name=c41 value="笔记本">笔记本</option>
+<option name=c42 value="羽毛球">羽毛球</option>
+<option name=c43 value="西红柿">西红柿</option>
+<option name=c44 value="一辈子">一辈子</option>
+<option name=c45 value="不得了">不得了</option>
+<option name=c46 value="不耐烦">不耐烦</option>
+<option name=c47 value="不要紧">不要紧</option>
+<option name=c48 value="不见得">不见得</option>
+<option name=c49 value="了不起">了不起</option>
+<option name=c50 value="使劲儿">使劲儿</option>
+<option name=c51 value="俱乐部">俱乐部</option>
+<option name=c52 value="健身房">健身房</option>
+<option name=c53 value="充电器">充电器</option>
+<option name=c54 value="动画片">动画片</option>
+<option name=c55 value="博物馆">博物馆</option>
+<option name=c56 value="卫生间">卫生间</option>
+<option name=c57 value="国庆节">国庆节</option>
+<option name=c58 value="太极拳">太极拳</option>
+<option name=c59 value="小伙子">小伙子</option>
+<option name=c60 value="工程师">工程师</option>
+<option name=c61 value="干活儿">干活儿</option>
+<option name=c62 value="幼儿园">幼儿园</option>
+<option name=c63 value="开幕式">开幕式</option>
+<option name=c64 value="忍不住">忍不住</option>
+<option name=c65 value="志愿者">志愿者</option>
+<option name=c66 value="怪不得">怪不得</option>
+<option name=c67 value="打交道">打交道</option>
+<option name=c68 value="打喷嚏">打喷嚏</option>
+<option name=c69 value="打招呼">打招呼</option>
+<option name=c70 value="摩托车">摩托车</option>
+<option name=c71 value="救护车">救护车</option>
+<option name=c72 value="日用品">日用品</option>
+<option name=c73 value="明信片">明信片</option>
+<option name=c74 value="牛仔裤">牛仔裤</option>
+<option name=c75 value="班主任">班主任</option>
+<option name=c76 value="登机牌">登机牌</option>
+<option name=c77 value="看不起">看不起</option>
+<option name=c78 value="矿泉水">矿泉水</option>
+<option name=c79 value="礼拜天">礼拜天</option>
+<option name=c80 value="系领带">系领带</option>
+<option name=c81 value="老百姓">老百姓</option>
+<option name=c82 value="胆小鬼">胆小鬼</option>
+<option name=c83 value="舍不得">舍不得</option>
+<option name=c84 value="解说员">解说员</option>
+<option name=c85 value="说不定">说不定</option>
+<option name=c86 value="连续剧">连续剧</option>
+<option name=c87 value="青少年">青少年</option>
+<option name=c88 value="麦克风">麦克风</option>
+<option name=c89 value="上进心">上进心</option>
+<option name=c90 value="不像话">不像话</option>
+<option name=c91 value="不得已">不得已</option>
+<option name=c92 value="不敢当">不敢当</option>
+<option name=c93 value="不由得">不由得</option>
+<option name=c94 value="世界观">世界观</option>
+<option name=c95 value="东道主">东道主</option>
+<option name=c96 value="乘务员">乘务员</option>
+<option name=c97 value="互联网">互联网</option>
+<option name=c98 value="伤脑筋">伤脑筋</option>
+<option name=c99 value="元宵节">元宵节</option>
+<option name=c100 value="公安局">公安局</option>
+<option name=c101 value="共和国">共和国</option>
+<option name=c102 value="出洋相">出洋相</option>
+<option name=c103 value="副作用">副作用</option>
+<option name=c104 value="博览会">博览会</option>
+<option name=c105 value="压岁钱">压岁钱</option>
+<option name=c106 value="双胞胎">双胞胎</option>
+<option name=c107 value="国务院">国务院</option>
+<option name=c108 value="堤坝 ">堤坝 </option>
+<option name=c109 value="墨水儿">墨水儿</option>
+<option name=c110 value="备忘录">备忘录</option>
+<option name=c111 value="夏令营">夏令营</option>
+<option name=c112 value="多元化">多元化</option>
+<option name=c113 value="大不了">大不了</option>
+<option name=c114 value="大伙儿">大伙儿</option>
+<option name=c115 value="天然气">天然气</option>
+<option name=c116 value="工艺品">工艺品</option>
+<option name=c117 value="巴不得">巴不得</option>
+<option name=c118 value="座右铭">座右铭</option>
+<option name=c119 value="当事人">当事人</option>
+<option name=c120 value="心眼儿">心眼儿</option>
+<option name=c121 value="恨不得">恨不得</option>
+<option name=c122 value="意味着">意味着</option>
+<option name=c123 value="打官司">打官司</option>
+<option name=c124 value="招投标">招投标</option>
+<option name=c125 value="指南针">指南针</option>
+<option name=c126 value="摄氏度">摄氏度</option>
+<option name=c127 value="收音机">收音机</option>
+<option name=c128 value="殖民地">殖民地</option>
+<option name=c129 value="水龙头">水龙头</option>
+<option name=c130 value="涮火锅">涮火锅</option>
+<option name=c131 value="玩意儿">玩意儿</option>
+<option name=c132 value="百分点">百分点</option>
+<option name=c133 value="立交桥">立交桥</option>
+<option name=c134 value="端午节">端午节</option>
+<option name=c135 value="简体字">简体字</option>
+<option name=c136 value="糖葫芦">糖葫芦</option>
+<option name=c137 value="繁体字">繁体字</option>
+<option name=c138 value="纳闷儿">纳闷儿</option>
+<option name=c139 value="纽扣儿">纽扣儿</option>
+<option name=c140 value="维生素">维生素</option>
+<option name=c141 value="编织 ">编织 </option>
+<option name=c142 value="羽绒服">羽绒服</option>
+<option name=c143 value="致力于">致力于</option>
+<option name=c144 value="董事长">董事长</option>
+<option name=c145 value="蛋白质">蛋白质</option>
+<option name=c146 value="螺丝钉">螺丝钉</option>
+<option name=c147 value="要不然">要不然</option>
+<option name=c148 value="里程碑">里程碑</option>
+<option name=c149 value="重阳节">重阳节</option>
+<option name=c150 value="领事馆">领事馆</option>
+
+</select>
+
+<P><select type=text id=explain style="display:none">
+<option name=c1 value="you're welcome; impolite; rude; blunt; don't mention it">you're welcome; impolite; rude; blunt; don't mention it</option>
+<option name=c2 value="taxi">taxi</option>
+<option name=c3 value="unworthy; to let down; I'm sorry; excuse me; pardon me; if you please; sorry? (please repeat)">unworthy; to let down; I'm sorry; excuse me; pardon me; if you please; sorry? (please repeat)</option>
+<option name=c4 value="how?; how about?; how was it?; how are things?">how?; how about?; how was it?; how are things?</option>
+<option name=c5 value="to make a telephone call">to make a telephone call</option>
+<option name=c6 value="it doesn't matter">it doesn't matter</option>
+<option name=c7 value="train station">train station</option>
+<option name=c8 value="why?; for what reason?">why?; for what reason?</option>
+<option name=c9 value="play basketball">play basketball</option>
+<option name=c10 value="waiter; waitress; attendant; customer service personnel; CL:個|个[ge4]">waiter; waitress; attendant; customer service personnel; CL:個|个[ge4]</option>
+<option name=c11 value="bicycle; bike; CL:輛|辆[liang4]">bicycle; bike; CL:輛|辆[liang4]</option>
+<option name=c12 value="play soccer(football)">play soccer(football)</option>
+<option name=c13 value="a while">a while</option>
+<option name=c14 value="an office; business premises; a bureau; CL:間|间[jian1]">an office; business premises; a bureau; CL:間|间[jian1]</option>
+<option name=c15 value="library; CL:家[jia1],個|个[ge4]">library; CL:家[jia1],個|个[ge4]</option>
+<option name=c16 value="Mandarin (common language); Putonghua (common speech of the Chinese language); ordinary speech">Mandarin (common language); Putonghua (common speech of the Chinese language); ordinary speech</option>
+<option name=c17 value="toilet; lavatory; washroom">toilet; lavatory; washroom</option>
+<option name=c18 value="cordial; enthusiastic; passion; passionate; passionately">cordial; enthusiastic; passion; passionate; passionately</option>
+<option name=c19 value="camera; CL:個|个[ge4],架[jia4],部[bu4],台[tai2],隻|只[zhi1]">camera; CL:個|个[ge4],架[jia4],部[bu4],台[tai2],隻|只[zhi1]</option>
+<option name=c20 value="suitcase">suitcase</option>
+<option name=c21 value="have no choice or option but to; cannot but; have to; can't help it; can't avoid">have no choice or option but to; cannot but; have to; can't help it; can't avoid</option>
+<option name=c22 value="table tennis; ping-pong; ping pong; table tennis ball; CL:個|个[ge4]">table tennis; ping-pong; ping pong; table tennis ball; CL:個|个[ge4]</option>
+<option name=c23 value="Renminbi (RMB); Chinese Yuan (CNY)">Renminbi (RMB); Chinese Yuan (CNY)</option>
+<option name=c24 value="credit card">credit card</option>
+<option name=c25 value="to do business">to do business</option>
+<option name=c26 value="gas station">gas station</option>
+<option name=c27 value="unbearable; unable to endure; can't stand">unbearable; unable to endure; can't stand</option>
+<option name=c28 value="salesperson; CL:個|个[ge4]">salesperson; CL:個|个[ge4]</option>
+<option name=c29 value="rubbish bin">rubbish bin</option>
+<option name=c30 value="plastic bag">plastic bag</option>
+<option name=c31 value="embassy; CL:座[zuo4],個|个[ge4]">embassy; CL:座[zuo4],個|个[ge4]</option>
+<option name=c32 value="chocolate (loanword); CL:塊|块[kuai4]">chocolate (loanword); CL:塊|块[kuai4]</option>
+<option name=c33 value="almost; nearly; more or less">almost; nearly; more or less</option>
+<option name=c34 value="to play a joke; to make fun of; to joke">to play a joke; to make fun of; to joke</option>
+<option name=c35 value="play the piano">play the piano</option>
+<option name=c36 value="take summer vacation">take summer vacation</option>
+<option name=c37 value="there's not enough time (to do sth); it's too late (to do sth)">there's not enough time (to do sth); it's too late (to do sth)</option>
+<option name=c38 value="there's still time; able to do sth in time">there's still time; able to do sth in time</option>
+<option name=c39 value="washer; washing machine; CL:臺|台[tai2]">washer; washing machine; CL:臺|台[tai2]</option>
+<option name=c40 value="graduate student; postgraduate student; research student">graduate student; postgraduate student; research student</option>
+<option name=c41 value="notebook; CL:本[ben3]">notebook; CL:本[ben3]</option>
+<option name=c42 value="shuttlecock; badminton; CL:個|个[ge4]">shuttlecock; badminton; CL:個|个[ge4]</option>
+<option name=c43 value="tomato; CL:隻|只[zhi1]">tomato; CL:隻|只[zhi1]</option>
+<option name=c44 value="(for) a lifetime">(for) a lifetime</option>
+<option name=c45 value="desperately serious; disastrous; extremely; exceedingly">desperately serious; disastrous; extremely; exceedingly</option>
+<option name=c46 value="impatience; impatient">impatience; impatient</option>
+<option name=c47 value="unimportant; not serious; it doesn't matter; never mind; it looks all right; but">unimportant; not serious; it doesn't matter; never mind; it looks all right; but</option>
+<option name=c48 value="not necessarily; not likely">not necessarily; not likely</option>
+<option name=c49 value="amazing; terrific; extraordinary">amazing; terrific; extraordinary</option>
+<option name=c50 value="to exert all one's strength">to exert all one's strength</option>
+<option name=c51 value="club (i.e. a group or organization); CL:個|个[ge4]">club (i.e. a group or organization); CL:個|个[ge4]</option>
+<option name=c52 value="gym; gymnasium">gym; gymnasium</option>
+<option name=c53 value="battery charger">battery charger</option>
+<option name=c54 value="cartoon; animation">cartoon; animation</option>
+<option name=c55 value="museum">museum</option>
+<option name=c56 value="bathroom; toilet; WC; CL:間|间[jian1]">bathroom; toilet; WC; CL:間|间[jian1]</option>
+<option name=c57 value="PRC National Day (October 1st)">PRC National Day (October 1st)</option>
+<option name=c58 value="shadowboxing or Taiji, T'aichi or T'aichichuan; traditional form of physical exercise or relaxation; a martial art">shadowboxing or Taiji, T'aichi or T'aichichuan; traditional form of physical exercise or relaxation; a martial art</option>
+<option name=c59 value="lad; young fellow; youngster; CL:個|个[ge4]">lad; young fellow; youngster; CL:個|个[ge4]</option>
+<option name=c60 value="engineer; CL:個|个[ge4],位[wei4],名[ming2]">engineer; CL:個|个[ge4],位[wei4],名[ming2]</option>
+<option name=c61 value="to work; manual labor">to work; manual labor</option>
+<option name=c62 value="kindergarten; nursery school">kindergarten; nursery school</option>
+<option name=c63 value="opening ceremony">opening ceremony</option>
+<option name=c64 value="cannot help; unable to bear">cannot help; unable to bear</option>
+<option name=c65 value="volunteer">volunteer</option>
+<option name=c66 value="lit. you can't blame it!; no wonder!; so that's why!">lit. you can't blame it!; no wonder!; so that's why!</option>
+<option name=c67 value="to come into contact with; to have dealings">to come into contact with; to have dealings</option>
+<option name=c68 value="to sneeze">to sneeze</option>
+<option name=c69 value="to greet sb by word or action; to give prior notice">to greet sb by word or action; to give prior notice</option>
+<option name=c70 value="motorbike; motorcycle; CL:輛|辆[liang4],部[bu4]">motorbike; motorcycle; CL:輛|辆[liang4],部[bu4]</option>
+<option name=c71 value="ambulance; CL:輛|辆[liang4]">ambulance; CL:輛|辆[liang4]</option>
+<option name=c72 value="articles for daily use; CL:件[jian4],個|个[ge4]">articles for daily use; CL:件[jian4],個|个[ge4]</option>
+<option name=c73 value="postcard">postcard</option>
+<option name=c74 value="jeans; CL:條|条[tiao2]; also written 牛崽褲|牛崽裤">jeans; CL:條|条[tiao2]; also written 牛崽褲|牛崽裤</option>
+<option name=c75 value="a teacher in charge of a class">a teacher in charge of a class</option>
+<option name=c76 value="boarding pass">boarding pass</option>
+<option name=c77 value="to look down upon; to despise">to look down upon; to despise</option>
+<option name=c78 value="mineral spring water; CL:瓶[ping2],杯[bei1]">mineral spring water; CL:瓶[ping2],杯[bei1]</option>
+<option name=c79 value="Sunday">Sunday</option>
+<option name=c80 value="tie one's necktie">tie one's necktie</option>
+<option name=c81 value="ordinary people; the "person in the street"; CL:個|个[ge4]">ordinary people; the "person in the street"; CL:個|个[ge4]</option>
+<option name=c82 value="coward">coward</option>
+<option name=c83 value="to hate to do sth; to hate to part with; to begrudge">to hate to do sth; to hate to part with; to begrudge</option>
+<option name=c84 value="commentator">commentator</option>
+<option name=c85 value="can't say for sure; maybe">can't say for sure; maybe</option>
+<option name=c86 value="serialized drama; dramatic series; show in parts">serialized drama; dramatic series; show in parts</option>
+<option name=c87 value="an adolescent; a youth; young person; teenage; teenager">an adolescent; a youth; young person; teenage; teenager</option>
+<option name=c88 value="microphone (loanword)">microphone (loanword)</option>
+<option name=c89 value="aggressiveness; gumption; enterprising spirit">aggressiveness; gumption; enterprising spirit</option>
+<option name=c90 value="unreasonable; shocking; outrageous">unreasonable; shocking; outrageous</option>
+<option name=c91 value="act against one's will; have no alternative but to; have to; to have no choice; must">act against one's will; have no alternative but to; have to; to have no choice; must</option>
+<option name=c92 value="lit. I dare not (accept the honor); fig. I don't deserve your praise; you flatter me">lit. I dare not (accept the honor); fig. I don't deserve your praise; you flatter me</option>
+<option name=c93 value="can't help; cannot but">can't help; cannot but</option>
+<option name=c94 value="worldview; world outlook; Weltanschauung">worldview; world outlook; Weltanschauung</option>
+<option name=c95 value="host; official host (e.g. venue for games or a conference)">host; official host (e.g. venue for games or a conference)</option>
+<option name=c96 value="attendant on an airplane, train, boat etc">attendant on an airplane, train, boat etc</option>
+<option name=c97 value="the Internet">the Internet</option>
+<option name=c98 value="knotty; troublesome; bothersome">knotty; troublesome; bothersome</option>
+<option name=c99 value="Lantern festival, the final event of the Spring festival 春節|春节, on 15th of first month of the lunar calendar">Lantern festival, the final event of the Spring festival 春節|春节, on 15th of first month of the lunar calendar</option>
+<option name=c100 value="Public Security Bureau">Public Security Bureau</option>
+<option name=c101 value="republic">republic</option>
+<option name=c102 value="to make a fool of oneself">to make a fool of oneself</option>
+<option name=c103 value="side effect">side effect</option>
+<option name=c104 value="exposition; international fair">exposition; international fair</option>
+<option name=c105 value="money given to children as new year present">money given to children as new year present</option>
+<option name=c106 value="twin; CL:對|对[dui4]">twin; CL:對|对[dui4]</option>
+<option name=c107 value="State Council (PRC); State Department (USA)">State Council (PRC); State Department (USA)</option>
+<option name=c108 value="dam">dam</option>
+<option name=c109 value="ink; CL:瓶[ping2] ">ink; CL:瓶[ping2] </option>
+<option name=c110 value="memorandum; aide-memoire; memorandum book">memorandum; aide-memoire; memorandum book</option>
+<option name=c111 value="summer camp">summer camp</option>
+<option name=c112 value="diversification; pluralism; to diversify">diversification; pluralism; to diversify</option>
+<option name=c113 value="at worst; if worst comes to worst; serious; alarming">at worst; if worst comes to worst; serious; alarming</option>
+<option name=c114 value="everybody; everyone; we all ">everybody; everyone; we all </option>
+<option name=c115 value="natural gas">natural gas</option>
+<option name=c116 value="handicraft article; handiwork; CL:個|个[ge4]">handicraft article; handiwork; CL:個|个[ge4]</option>
+<option name=c117 value="to be eager for; to long for; to look forward to">to be eager for; to long for; to look forward to</option>
+<option name=c118 value="motto; maxim">motto; maxim</option>
+<option name=c119 value="persons involved or implicated; party (to an affair)">persons involved or implicated; party (to an affair)</option>
+<option name=c120 value="one's thoughts; mind; intention; willingness to accept new ideas; baseless suspicions">one's thoughts; mind; intention; willingness to accept new ideas; baseless suspicions</option>
+<option name=c121 value="wishing one could do sth; to hate to be unable; itching to do sth; can't wait for; to wish one could do sth; to desire strongly">wishing one could do sth; to hate to be unable; itching to do sth; can't wait for; to wish one could do sth; to desire strongly</option>
+<option name=c122 value="to signify; to mean; to imply">to signify; to mean; to imply</option>
+<option name=c123 value="to file a lawsuit; to sue; to dispute">to file a lawsuit; to sue; to dispute</option>
+<option name=c124 value="bidding; tender">bidding; tender</option>
+<option name=c125 value="compass">compass</option>
+<option name=c126 value="degrees centigrade">degrees centigrade</option>
+<option name=c127 value="radio; CL:臺|台[tai2]">radio; CL:臺|台[tai2]</option>
+<option name=c128 value="colony">colony</option>
+<option name=c129 value="faucet; tap">faucet; tap</option>
+<option name=c130 value="to instant-boil (mutton, beef, vegetables, etc.)">to instant-boil (mutton, beef, vegetables, etc.)</option>
+<option name=c131 value="toy; plaything; thing; act; trick (in a performance, stage show, acrobatics etc) ">toy; plaything; thing; act; trick (in a performance, stage show, acrobatics etc) </option>
+<option name=c132 value="percentage point">percentage point</option>
+<option name=c133 value="overpass; flyover">overpass; flyover</option>
+<option name=c134 value="The Dragon Boat Festival (the 5th day of the 5th lunar month)">The Dragon Boat Festival (the 5th day of the 5th lunar month)</option>
+<option name=c135 value="simplified Chinese character, as opposed to traditional Chinese character 繁體字|繁体字[fan2 ti3 zi4]">simplified Chinese character, as opposed to traditional Chinese character 繁體字|繁体字[fan2 ti3 zi4]</option>
+<option name=c136 value="sugar coated Chinese hawthorn fruit on a stick; tanghulu">sugar coated Chinese hawthorn fruit on a stick; tanghulu</option>
+<option name=c137 value="traditional Chinese character">traditional Chinese character</option>
+<option name=c138 value="puzzled; bewildered">puzzled; bewildered</option>
+<option name=c139 value="button">button</option>
+<option name=c140 value="vitamin">vitamin</option>
+<option name=c141 value="to weave; to knit; to plait; to braid">to weave; to knit; to plait; to braid</option>
+<option name=c142 value="down garment">down garment</option>
+<option name=c143 value="to devote to; to dedicate to">to devote to; to dedicate to</option>
+<option name=c144 value="chairman of the board; chairman">chairman of the board; chairman</option>
+<option name=c145 value="protein">protein</option>
+<option name=c146 value="screw">screw</option>
+<option name=c147 value="otherwise; or else; or">otherwise; or else; or</option>
+<option name=c148 value="milestone">milestone</option>
+<option name=c149 value="Double Ninth or Yang Festival; 9th day of 9th lunar month">Double Ninth or Yang Festival; 9th day of 9th lunar month</option>
+<option name=c150 value="consulate">consulate</option>
+
+
+</select>	
+<button id=text onclick="test()" >Try</button>
+<P>
+	<Table id=hide0 border=0 style="display:none">	
+	<TR>
+<TD>Number of Correct Attempts : <span id=count style="display:none"></span><span id=countNum></span>
+<TR>
+<TD>Number of Wrong Attempts : <span id=count2 style="display:none"></span><span id=countNum2></span>
+</Table>		
+		<P>
+		<span id=answer></span>
+		</P>
+		<P>
+		<span id=message></span>
+		</P>
+		
+		
+	
+	<button id=text2 onclick="listen()" style="display:none">Listen Again</button>
+	<P>
+	<Table id=hide border=0 width=600 height=50 cellspacing=10 style="display:none">
+	
+	<TR>
+	<TD  width=200 height=100 align=center  ><span id="a1" >word : </TD>
+	<TD colspan=2 width=400 height=100 align=left ><span id="a2" ></TD>
+	
+	
+	
+	<TR>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q1')" ><span id="q1" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q2')"><span id="q2" ></TD>
+	<TD bgcolor=yellow width=200 height=100 align=center onclick="myFunction('q3')"><span id="q3" ></TD>
+	
+
+	</Table>
+    
+
+</div>
+</body>
+</html>
+<script>
+
+	
+function listen() {
+ 
+ var msg1 = document.getElementById("char").value;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[49];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[18];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+	
+function speak(msg1) {
+ 
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[0];
+	}
+  window.speechSynthesis.speak(msg);
+
+}
+
+
+
+function myFunction(q) {
+  
+  if (document.getElementById("explain").value ==  document.getElementById(q).innerHTML)
+  {
+     document.getElementById("message").innerHTML =  "correct" ;
+	  speak("Correct");
+	document.getElementById("count").innerHTML = document.getElementById("count").innerHTML + 1;
+	document.getElementById("countNum").innerHTML = document.getElementById("count").innerHTML.length;
+	test();
+
+	}
+     else
+     {
+     document.getElementById("message").innerHTML =  "Wrong! Try again`" ;
+	 document.getElementById("count2").innerHTML = document.getElementById("count2").innerHTML + 1;
+	 	document.getElementById("countNum2").innerHTML = document.getElementById("count2").innerHTML.length;
+	  speak("wrong");
+  }
+}
+
+
+function test() {
+
+document.getElementById("text").innerHTML = "Next";
+
+
+var ranNum;
+var x = document.getElementById("char").childElementCount;
+
+ranNum = Math.floor(Math.random() * x); 
+
+document.getElementById("char").selectedIndex = ranNum;
+
+document.getElementById("explain").selectedIndex = ranNum;
+
+
+
+ document.getElementById("a2").innerHTML = document.getElementById("char").value;
+
+answer =  document.getElementById("explain")[ranNum].value ; 
+
+listen();
+ranNum = Math.floor(Math.random() * x); 
+
+document.getElementById("q1").innerHTML = document.getElementById("explain")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * x); 
+
+document.getElementById("q2").innerHTML = document.getElementById("explain")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * x); 
+
+document.getElementById("q3").innerHTML = document.getElementById("explain")[ranNum].value;
+
+
+ranNum = Math.floor(Math.random() * 3); 
+
+
+
+  var fruits = ranNum;
+  
+
+  
+  switch(fruits) {
+    case 0:
+      document.getElementById("q1").innerHTML = answer;
+    break;
+    case 1:
+      document.getElementById("q2").innerHTML = answer;
+    break;
+    case 2:
+      document.getElementById("q3").innerHTML = answer;
+    break;
+    default:
+      document.getElementById("q1").innerHTML = answer;
+  }
+
+  
+
+ document.getElementById("hide").style.display = "inline";  
+document.getElementById("hide0").style.display = "inline";  
+document.getElementById("text2").style.display = "inline";  
+
+
+
+}
+
+
+
+</script>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drag and Drop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	
+<style>
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+#drop_zone {
+    background-color: #eee;
+    border: #999 1px solid ;
+    width: 580px;
+    height: 100px;
+    padding: 8px;
+    font-size: 19px;
+  }
+
+span, button, td {
+	font-size:20pt;
+      padding: 8px;
+}
+
+</style>  
+	
+</head>
+
+<body>
+<center>
+<P><select type=text id=char style="display:none">
+<option name=c1 value="about">about</option>
+<option name=c2 value="all">all</option>
+<option name=c3 value="an">an</option>
+<option name=c4 value="and">and</option>
+<option name=c5 value="are">are</option>
+<option name=c6 value="as">as</option>
+<option name=c7 value="at">at</option>
+<option name=c8 value="be">be</option>
+<option name=c9 value="been">been</option>
+<option name=c10 value="but">but</option>
+<option name=c11 value="by">by</option>
+<option name=c12 value="called">called</option>
+<option name=c13 value="can">can</option>
+<option name=c14 value="come">come</option>
+<option name=c15 value="could">could</option>
+<option name=c16 value="day">day</option>
+<option name=c17 value="did">did</option>
+<option name=c18 value="do">do</option>
+<option name=c19 value="down">down</option>
+<option name=c20 value="each">each</option>
+<option name=c21 value="find">find</option>
+<option name=c22 value="first">first</option>
+<option name=c23 value="for">for</option>
+<option name=c24 value="from">from</option>
+<option name=c25 value="get">get</option>
+<option name=c26 value="go">go</option>
+<option name=c27 value="had">had</option>
+<option name=c28 value="has">has</option>
+<option name=c29 value="have">have</option>
+<option name=c30 value="he">he</option>
+<option name=c31 value="her">her</option>
+<option name=c32 value="him">him</option>
+<option name=c33 value="his">his</option>
+<option name=c34 value="how">how</option>
+<option name=c35 value="I">I</option>
+<option name=c36 value="if">if</option>
+<option name=c37 value="in">in</option>
+<option name=c38 value="into">into</option>
+<option name=c39 value="is">is</option>
+<option name=c40 value="it">it</option>
+<option name=c41 value="like">like</option>
+<option name=c42 value="long">long</option>
+<option name=c43 value="look">look</option>
+<option name=c44 value="made">made</option>
+<option name=c45 value="make">make</option>
+<option name=c46 value="many">many</option>
+<option name=c47 value="may">may</option>
+<option name=c48 value="more">more</option>
+<option name=c49 value="my">my</option>
+<option name=c50 value="no">no</option>
+<option name=c51 value="not">not</option>
+<option name=c52 value="now">now</option>
+<option name=c53 value="number">number</option>
+<option name=c54 value="of">of</option>
+<option name=c55 value="oil">oil</option>
+<option name=c56 value="on">on</option>
+<option name=c57 value="one">one</option>
+<option name=c58 value="or">or</option>
+<option name=c59 value="other">other</option>
+<option name=c60 value="out">out</option>
+<option name=c61 value="part">part</option>
+<option name=c62 value="people">people</option>
+<option name=c63 value="said">said</option>
+<option name=c64 value="see">see</option>
+<option name=c65 value="she">she</option>
+<option name=c66 value="sit">sit</option>
+<option name=c67 value="so">so</option>
+<option name=c68 value="some">some</option>
+<option name=c69 value="than">than</option>
+<option name=c70 value="that">that</option>
+<option name=c71 value="the">the</option>
+<option name=c72 value="their">their</option>
+<option name=c73 value="them">them</option>
+<option name=c74 value="then">then</option>
+<option name=c75 value="there">there</option>
+<option name=c76 value="these">these</option>
+<option name=c77 value="they">they</option>
+<option name=c78 value="this">this</option>
+<option name=c79 value="time">time</option>
+<option name=c80 value="to">to</option>
+<option name=c81 value="two">two</option>
+<option name=c82 value="up">up</option>
+<option name=c83 value="use">use</option>
+<option name=c84 value="was">was</option>
+<option name=c85 value="water">water</option>
+<option name=c86 value="way">way</option>
+<option name=c87 value="we">we</option>
+<option name=c88 value="were">were</option>
+<option name=c89 value="what">what</option>
+<option name=c90 value="when">when</option>
+<option name=c91 value="which">which</option>
+<option name=c92 value="who">who</option>
+<option name=c93 value="will">will</option>
+<option name=c94 value="with">with</option>
+<option name=c95 value="words">words</option>
+<option name=c96 value="would">would</option>
+<option name=c97 value="write">write</option>
+<option name=c98 value="you">you</option>
+<option name=c99 value="your">your</option>
+
+
+</select>
+<P>
+<button id="click" onclick="start()" >
+Start
+</button>	
+
+<div id=dd  style="display:none">
+<Table width=600>
+
+<TR>
+
+<TD ><button id=text2 onclick="listen()">Listen Again</button></TD>
+
+<TD>
+Number of Correct Attempts : <span id=count style="display:none"></span><span id=countNum></span>
+<BR>
+Number of Wrong Attempts : <span id=count2 style="display:none"></span><span id=countNum2></span>
+
+</Table>
+    <span id="app_status">Drag status: </span>
+    <h2>Drop the letter into the box below to spell the words you heard</h2>
+	
+	    <div id="drop_zone" ondragover="return false"></div>
+	
+	<table>
+	<TR id=TR1>
+	</TR>
+	</table>
+	
+<span id=answer></span>
+	
+<BR><span id=message></span>
+		
+<P><button id="click" onclick="myFunction()" >
+Submit
+</button>
+
+</div>
+</body>
+
+</html>
+
+<script>
+
+
+
+function listen() {
+ 
+ var msg1 = document.getElementById("char").value;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[2];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+
+function _(id) {
+    return document.getElementById(id);
+}
+
+var droppedIn = false;
+
+
+function start() {
+
+document.getElementById("dd").style.display = "inline";  
+var list = document.getElementById("TR1");
+
+// As long as <ul> has a child node, remove it
+while (list.hasChildNodes()) {   
+  list.removeChild(list.firstChild);
+}
+ 
+
+
+var list = document.getElementById("drop_zone");
+
+// As long as <ul> has a child node, remove it
+while (list.hasChildNodes()) {   
+  list.removeChild(list.firstChild);
+} 
+    // Drag zone functionality
+  
+    function handleDragEnter(e) {
+        _('app_status').innerHTML = "You are dragging over the " + e
+            .target
+            .getAttribute('id');
+    }
+
+    function handleDragLeave(e) {
+        _('app_status').innerHTML = "You left the " + e
+            .target
+            .getAttribute('id');
+    }
+
+    function handleDragDrop(e) {
+        e.preventDefault();
+		
+        var element_id = e
+            .dataTransfer
+            .getData("text");
+        e
+            .target
+            .appendChild(_(element_id));
+        _(element_id).removeAttribute("draggable")
+        _(element_id).style.cursor = "default";
+        droppedIn = true;
+        _('app_status').innerHTML = "You droped " + element_id + " into drop zone";
+    }
+
+ 
+var ranNum;
+ranNum = Math.floor(Math.random() * 99); 
+
+document.getElementById("char").selectedIndex = ranNum;
+
+answer =  document.getElementById("char")[ranNum].value ; 
+
+ var str = answer;
+ 
+ listen();
+var fruits = [];     
+ for (i = 0; i < str.length; i++) { 
+
+  
+    var text = str.charAt(i);
+	fruits.push(text);
+   
+ 
+}
+
+fruits.sort();
+
+ 
+   var dropZone = _('drop_zone');
+
+    dropZone.addEventListener('dragenter', handleDragEnter, false);
+    dropZone.addEventListener('dragleave', handleDragLeave, false);
+    dropZone.addEventListener('drop', handleDragDrop, false);
+
+
+ for (i = 0; i < str.length; i++) { 
+
+    var text = fruits[i];
+     var object = document.createElement("TD");
+         object.id = "object" + i;
+		 object.class ="objects";
+		 
+		   object.style = "display: inline-block; background-color: #FFF3CC; border: #DFBC6A 1px solid; width: 50px; height: 50px;  margin: 10px; padding: 8px; font-size: 35px;  text-align: center; box-shadow: 2px 2px 2px #999;  cursor: move;"
+		   object.draggable = "true";
+		   object.innerHTML = text;
+var element = document.getElementById("TR1");
+element.appendChild(object);
+  
+  var activeEvent = '';
+    var originalX = '';
+    var originalY = '';
+ 
+    object.addEventListener('dragstart', handleDragStart, false);
+    object.addEventListener('dragend', handleDragEnd, false);
+    object.addEventListener('touchstart', handleTouchStart, false);
+    object.addEventListener('touchmove', handleTouchMove, false);
+    object.addEventListener('touchend', handleTouchEnd, false);
+  
+ 
+
+ 
+}
+
+    
+    function handleDragStart(e) {
+        _('app_status').innerHTML = "Dragging the element " + e
+            .target
+            .getAttribute('id');
+        e.dataTransfer.dropEffect = "move";
+        e
+            .dataTransfer
+            .setData("text", e.target.getAttribute('id'));
+    }
+
+    function handleDragEnd(e) {
+        if (droppedIn == false) {
+            _('app_status').innerHTML = "You let the " + e
+                .target
+                .getAttribute('id') + " go.";
+        }
+        droppedIn = false;
+    }
+
+    function handleTouchStart(e) {
+        _('app_status').innerHTML = "Touch start with element " + e
+            .target
+            .getAttribute('id');
+        originalX = (e.target.offsetLeft - 10) + "px";
+        originalY = (e.target.offsetTop - 10) + "px";
+        activeEvent = 'start';
+    }
+
+    function handleTouchMove(e) {
+        var touchLocation = e.targetTouches[0];
+        var pageX = (touchLocation.pageX - 50) + "px";
+        var pageY = (touchLocation.pageY - 50) + "px";
+        _('app_status').innerHTML = "Touch x " + pageX + " Touch y " + pageY;
+        e.target.style.position = "absolute";
+        e.target.style.left = pageX;
+        e.target.style.top = pageY;
+        activeEvent = 'move';
+    }
+
+    function handleTouchEnd(e) {
+        e.preventDefault();
+        if (activeEvent === 'move') {
+            var pageX = (parseInt(e.target.style.left) - 50);
+            var pageY = (parseInt(e.target.style.top) - 50);
+
+            if (detectTouchEnd(dropZone.offsetLeft, dropZone.offsetTop, pageX, pageY, dropZone.offsetWidth, dropZone.offsetHeight)) {
+                dropZone.appendChild(e.target);
+                e.target.style.position = "initial";
+                droppedIn = true;
+                _('app_status').innerHTML = "You droped " + e
+                    .target
+                    .getAttribute('id') + " into drop zone";
+            } else {
+                e.target.style.left = originalX;
+                e.target.style.top = originalY;
+                _('app_status').innerHTML = "You let the " + e
+                    .target
+                    .getAttribute('id') + " go.";
+            }
+        }
+    }
+
+    function detectTouchEnd(x1, y1, x2, y2, w, h) {
+        //Very simple detection here
+        if (x2 - x1 > w) 
+            return false;
+        if (y2 - y1 > h) 
+            return false;
+        return true;
+    }
+}
+
+	
+function speak(msg1) {
+ 
+ 
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  window.speechSynthesis.speak(msg);
+
+}
+
+function myFunction() {
+  
+  document.getElementById("answer").innerHTML = document.getElementById("drop_zone").innerHTML ;
+  var str = document.getElementById("char").value ; 
+
+  
+
+var answer = document.getElementById("answer").innerHTML ;
+
+
+  if (document.getElementById("char").value ==  answer )
+  {
+     document.getElementById("message").innerHTML =  "correct" ;
+	  speak("Correct");
+	document.getElementById("count").innerHTML = document.getElementById("count").innerHTML + 1;
+	document.getElementById("countNum").innerHTML = document.getElementById("count").innerHTML.length;
+	start();
+
+	}
+     else
+     {
+     document.getElementById("message").innerHTML =  "Wrong! Try again!" ;
+	 document.getElementById("count2").innerHTML = document.getElementById("count2").innerHTML + 1;
+	 document.getElementById("countNum2").innerHTML = document.getElementById("count2").innerHTML.length;
+	  speak("wrong");
+  }
+  
+
+
+  
+
+
+
+  
+  
+  }
+
+
+</script>
